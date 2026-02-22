@@ -8,7 +8,9 @@ import streamlit as st
 
 LOCATIONS = {
     "Fislisbach":  (47.438, 8.292),
+    "Zürich":      (47.367, 8.550),
     "Hamburg":     (53.5511, 9.9937),
+    "Haugesund":   (59.414, 5.2689),
     "Bodø":        (67.28, 14.405),
     "Sortland":    (68.694, 15.416),
     "Harstad":     (68.798, 16.541),
@@ -16,6 +18,13 @@ LOCATIONS = {
     "Alta":        (69.9689, 23.2716),
     "Trondheim":   (63.4305, 10.3951),
     "Måløy":       (61.936, 5.113),
+    "Stockholm":   (59.329, 18.069),
+    "Cork":        (51.898, -8.471),
+    "Dublin":      (53.333, -6.249),
+    "Belfast":     (54.597, -5.925),
+    "Glasgow":     (55.865, -4.258),
+    "Kirkwall":    (58.985, -2.959),
+    "Invergordon": (57.689, -4.167),
 }
 
 BASE_URL = "https://api.open-meteo.com/v1/forecast"
@@ -94,7 +103,7 @@ def summarize_location_for_index(loc_name, api_result, day_index):
         "Ort": loc_name,
         "Tmin [°C]": tmin,
         "Tmax [°C]": tmax,
-        "Taupunkt 12:00 [°C]": dew_at_noon,
+        #"Taupunkt 12:00 [°C]": dew_at_noon,
         "max Wind [km/h]": wind_max,
         "Niederschlag Tag [mm]": precip_sum,
         "max Regen 24h [mm/h]": max_rain_24h,
